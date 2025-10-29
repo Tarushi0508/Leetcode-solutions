@@ -1,0 +1,10 @@
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        for(int rows=0;rows<matrix.length;rows++){
+            for(int cols=0;cols<matrix[rows].length;cols++){
+                if(target==matrix[rows][cols]) return true;
+            }
+        }
+        return false;
+    }
+}
