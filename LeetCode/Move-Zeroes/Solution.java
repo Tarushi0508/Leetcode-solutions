@@ -1,18 +1,13 @@
-class Solution {
-    public void moveZeroes(int[] nums) {
-        if(nums==null||nums.length==0){
-            return;
-        }
-        int inspos=0;
-        for(int num:nums){
-            if(num!=0){
-                nums[inspos++]=num;
-            }
-        }
-        while(inspos<nums.length){
-            nums[inspos++]=0;
-        }
-      
+class Solution:
+    def moveZeroes(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        pos = 0
         
-    }
-}
+        for i in range(len(nums)):
+            el = nums[i]
+            if el != 0:
+                nums[pos], nums[i] = nums[i], nums[pos]
+                pos += 1
