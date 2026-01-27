@@ -1,1 +1,2 @@
-df = products[(products['low_fats'] == 'Y') & (products['recyclable'] == 'Y')]
+1# Write your MySQL query statement below
+2SELECT product_id from Products WHERE low_fats='Y'AND recyclable='Y'; 
