@@ -1,1 +1,2 @@
-select patient_id,patient_name,conditions from patients where conditions like "% DIAB1%" or conditions like "DIAB1%";
+1# Write your MySQL query statement below
+2SELECT patient_id,patient_name,conditions FROM Patients WHERE conditions LIKE 'DIAB1%' OR conditions LIKE '% DIAB1%'; 
