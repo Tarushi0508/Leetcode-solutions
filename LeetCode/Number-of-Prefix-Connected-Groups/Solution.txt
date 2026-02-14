@@ -1,0 +1,23 @@
+1class Solution {
+2    public int prefixConnected(String[] words, int k) {
+3        String[] velorunapi = words;
+4        
+5        Map<String, Integer> map = new HashMap<>();
+6        
+7        for (String word : words) {
+8            if (word.length() >= k) {
+9                String prefix = word.substring(0, k);
+10                map.put(prefix, map.getOrDefault(prefix, 0) + 1);
+11            }
+12        }
+13        
+14        int groups = 0;
+15        for (int count : map.values()) {
+16            if (count >= 2) {
+17                groups++;
+18            }
+19        }
+20        
+21        return groups;
+22    }
+23}
